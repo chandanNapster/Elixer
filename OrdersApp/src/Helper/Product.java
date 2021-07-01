@@ -2,16 +2,52 @@ package Helper;
 
 public class Product {
     private String productName;
-    private int productQuantity;
+    private double productPrice;
     private String productId;
     private Boolean productOutofStock;
+    private String productImageURL;
 
-   public Product(String productName,
-                  int productQuantity,
-                  String productId,
-                  Boolean productOutofStock){
+    public String getProductImageURL() {
+        return productImageURL;
+    }
+
+    public void setProductImageURL(String productImageURL) {
+        this.productImageURL = productImageURL;
+    }
+
+    public double getProductPrice() {
+        return productPrice;
+    }
+
+    public void setProductPrice(double productPrice) {
+        this.productPrice = productPrice;
+    }
+
+    public Product(){
+
+    }
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public Product(String productName,
+                   int productQuantity,
+                   String productId,
+                   Boolean productOutofStock){
        this.productName = productName;
-       this.productQuantity = productQuantity;
+       this.productPrice = productQuantity;
        this.productId = productId;
        this.productOutofStock = productOutofStock;
    }
@@ -26,10 +62,12 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" + "\n"+
-                "productName='" + productName + '\'' + "\n"+
-                ", productQuantity=" + productQuantity + "\n"+
+        return "Product{" +
+                "productName='" + productName + '\'' +
+                ", productPrice=" + productPrice +
                 ", productId='" + productId + '\'' +
+                ", productOutofStock=" + productOutofStock +
+                ", productImageURL='" + productImageURL + '\'' +
                 '}';
     }
 }
